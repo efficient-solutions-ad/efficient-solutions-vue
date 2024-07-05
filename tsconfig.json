@@ -1,0 +1,43 @@
+{
+  "include": ["src/**/*.ts", "src/**/*.vue", "vite.config.js", "env.d.ts"],
+  "compilerOptions": {
+    /* Type Checking */
+    "strict": true,
+
+    /* Modules */
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "paths": {
+      "@base/*": ["./*"],
+      "@src/*": ["./src/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@themes/*": ["./src/themes/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@stores/*": ["./src/stores/*"],
+      "@components/*": ["./src/components/*"],
+      "@declarations/*": ["./src/declarations/*"],
+      "@constants/*": ["./src/constants/*"],
+      "@enums/*": ["./src/enums/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@plugins/*": ["./src/plugins/*"]
+    },
+    "types": ["node", "vite/client"],
+
+    /* Emit */
+    "importsNotUsedAsValues": "remove",
+    "noEmit": true,
+    "sourceMap": true,
+
+    /* Interop Constraints */
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+
+    /* Language and Environment */
+    "target": "ESNEXT",
+    "useDefineForClassFields": true,
+
+    /* Completeness */
+    "skipLibCheck": true
+  }
+}
