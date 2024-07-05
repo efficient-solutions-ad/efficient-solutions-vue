@@ -1,54 +1,58 @@
 <template>
-  <v-layout id="layout">
-    <!-- <container-notification></container-notification> -->
+  <v-card class="mx-auto">
+    <v-layout id="layout">
+      <!-- <container-notification></container-notification> -->
 
-    <header-container-component></header-container-component>
+      <header-container-component></header-container-component>
 
-    <!-- Pages -->
-    <v-main style="--v-layout-top: 0; border: 4px solid black">
-      <!-- Section: Welcome -->
-      <section-container-component id="welcome">
-        <template #section-content> Welcome section </template>
-      </section-container-component>
+      <v-divider color="accent" :thickness="3"></v-divider>
 
-      <!-- Section: About us -->
-      <section-container-component id="about-us">
-        <template #section-content> About us section </template>
-      </section-container-component>
+      <!-- Single page -->
+      <v-main class="w-100 d-flex flex-column overflow-y-auto" :style="computed_css_main_style">
+        <!-- Section: Welcome -->
+        <container-section id="welcome" class="w-100 bg-primary-tint-3">
+          <template #section-content> Welcome section </template>
+        </container-section>
 
-      <!-- Section: Something... -->
-      <section-container-component id="something">
-        <template #section-content> Something section </template>
-      </section-container-component>
+        <!-- Section: About us -->
+        <container-section id="about-us" class="bg-primary-tint-3">
+          <template #section-content> About us section </template>
+        </container-section>
 
-      <!-- Section: About Anne or Dylan -->
-      <section-container-component id="dylan">
-        <template #section-content> Dylan section </template>
-      </section-container-component>
+        <!-- Section: Something... -->
+        <container-section id="something" class="bg-primary-tint-3">
+          <template #section-content> Something section </template>
+        </container-section>
 
-      <!-- Section: About Anne or Dylan -->
-      <section-container-component id="anne">
-        <template #section-content> Anne section </template>
-      </section-container-component>
+        <!-- Section: About Anne or Dylan -->
+        <container-section id="dylan" class="bg-primary-tint-3">
+          <template #section-content> Dylan section </template>
+        </container-section>
 
-      <!-- Section: Service offered -->
-      <section-container-component id="services">
-        <template #section-content> Service section </template>
-      </section-container-component>
+        <!-- Section: About Anne or Dylan -->
+        <container-section id="anne" class="bg-primary-tint-3">
+          <template #section-content> Anne section </template>
+        </container-section>
 
-      <!-- Section: Mission/Vision + CTA -->
-      <section-container-component id="mission-vision">
-        <template #section-content> Mission/Vision section </template>
-      </section-container-component>
+        <!-- Section: Service offered -->
+        <container-section id="services" class="bg-primary-tint-3">
+          <template #section-content> Service section </template>
+        </container-section>
 
-      <!-- Section: Contact form -->
-      <section-container-component id="contact-form">
-        <template #section-content> Contact form section </template>
-      </section-container-component>
-    </v-main>
+        <!-- Section: Mission/Vision + CTA -->
+        <container-section id="mission-vision" class="bg-primary-tint-3">
+          <template #section-content> Mission/Vision section </template>
+        </container-section>
 
-    <footer-container-component></footer-container-component>
-  </v-layout>
+        <!-- Section: Contact form -->
+        <container-section id="contact-form" class="bg-primary-tint-3">
+          <template #section-content> Contact form section </template>
+        </container-section>
+      </v-main>
+
+      <footer-container-component></footer-container-component>
+    </v-layout>
+  </v-card>
 </template>
 
 <script lang="ts">
@@ -62,6 +66,13 @@ export default defineComponent({
   components: {
     'header-container-component': HeaderContainerComp,
     'footer-container-component': FooterContainerComp
+  },
+  computed: {
+    computed_css_main_style(): string {
+      let retval: string =
+        'background: linear-gradient(180deg, rgba(24,114,231,1) 0%, rgba(178,208,247,1) 100%, rgba(229,239,252,1) 100%);'
+      return retval
+    }
   }
 })
 </script>

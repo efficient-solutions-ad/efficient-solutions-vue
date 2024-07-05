@@ -55,10 +55,10 @@ import {
   VItemGroup,
   VFooter
 } from 'vuetify/components'
-import ContainerSection from '@components/containers/button/button-component.vue'
+import ContainerSection from '@components/containers/section/section-component.vue'
 import ContainerBtn from '@components/containers/button/button-component.vue'
-import ContainerNotification from '@components/containers/button/button-component.vue'
-import ContainerFeedback from '@components/containers/button/button-component.vue'
+import ContainerNotification from '@components/containers/feedback/notification-component.vue'
+import ContainerFeedback from '@components/containers/feedback/feedback-component.vue'
 import {
   VExpandTransition,
   VExpandXTransition,
