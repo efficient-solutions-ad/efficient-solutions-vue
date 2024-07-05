@@ -74,7 +74,7 @@ import { light, dark } from '@themes/themes.js'
 
 // Styles
 import 'vuetify/styles'
-import '@styles/scss/main.scss'
+//import '@styles/scss/main.scss'
 
 const vuetify = createVuetify({
   icons: {
